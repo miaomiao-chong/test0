@@ -1,0 +1,25 @@
+<view class="songDetailContainer">
+<view class="musicName">{{song.title}}</view>
+  <view class="singer">--{{song.singer}}--</view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay&&'needleRotated'}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer">
+    <image class="disc"  src="/static/images/song/disc.png"></image>
+    <image class="musicImg" style="animation-play-state:{{isPlay==true?'running':'paused'}}"src="{{song.coverImg}}"></image>
+  </view>
+  <!-- 进度条 -->
+  <view class="progressControl">
+    <text>{{sliderDetail.currentTime}}</text>
+    <slider bindchange="sliderChange" block-size="12"value="{{sliderDetail.percent}}" ></slider>
+    <text>{{sliderDetail.duration}}</text>
+  </view>
+  <!-- 下面的几个按钮 -->
+  <view class="musicControl" > 
+    <text class="iconfont icon-suijibofang"></text>
+    <text class="iconfont icon-shangyiqu"id="pre" bindtap="handleChange"></text>
+    <text wx:if="{{isPlay==true}}" class="iconfont icon-bofang1  big" bindtap="handleMusicPlay"></text>
+    <text wx:else class="iconfont icon-bofang" bindtap="handleMusicPlay"></text>
+    <text class="iconfont icon-xiayiqu" bindtap="handleChange" id="next"></text>
+    <text class="iconfont icon-caidan"></text>
+  </view>
+</view>

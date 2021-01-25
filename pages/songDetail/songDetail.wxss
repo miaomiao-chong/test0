@@ -1,0 +1,123 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20rpx;
+}
+/* 作者文字 */
+.songDetailContainer .musicName{
+  font-size: 46rpx;
+  margin-top: 35rpx;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.466);
+}
+.songDetailContainer .singer{
+  margin-top: 15rpx;
+  color: rgba(0, 0, 0, 0.466);
+}
+/* 补摇杆的圆 */
+.circle{
+  z-index: 2;
+  position: relative;
+  top: 40rpx;
+  width: 75rpx ;
+  height: 75rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* 摇杆 */
+.needle {
+  position: relative;
+  top: 30rpx;
+  left: 60rpx;
+  width: 192rpx;
+  height: 274rpx;
+  /* border: 1rpx solid red; */
+  z-index: 1;
+  transform-origin: top left;
+  transform: rotate(-20deg);
+   transition: transform 1s;
+}
+/* 在播放状态下摇杆的wxss */
+.needleRotated{
+  transform-origin: top left;
+  transform: rotate(0deg);
+}
+/* 磁盘  */
+.discContainer{
+  width: 598rpx;
+  height: 598rpx;
+  position: relative;
+  top: -180rpx;
+}
+.disc {
+  width: 598rpx;
+  height: 598rpx;
+  /* border: 1rpx solid red; */
+  
+
+}
+
+/* 唱盘图片 */
+.musicImg{
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  animation-delay: 2s;
+  animation: discRotate 5s infinite linear;
+}
+@keyframes discRotate{
+  from{
+    transform: rotate(0);
+  }to{
+    transform: rotate(360deg);
+  }
+}
+
+/* 播放控制盒子 */
+.musicControl{
+  border-top:1rpx solid rgba(231, 223, 223, 0.644);
+  padding-top: 25rpx;
+  height: 80rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 30rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+/* 播放控制按钮图标 */
+.musicControl text{
+  font-size: 60rpx;
+  /* color: #fff; */
+  width: 20%;
+  text-align: center;
+}
+.musicControl .big{
+  font-size: 100rpx;
+}
+
+/* 进度条 */
+.progressControl{
+  position: absolute;
+  bottom:  200rpx;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  color: rgb(224, 211, 204);
+  font-size: 39rpx;
+  align-items: center;
+}
+slider{
+
+  flex: 1;
+}

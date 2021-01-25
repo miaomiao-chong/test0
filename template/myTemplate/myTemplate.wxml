@@ -1,0 +1,6 @@
+<!-- 定义模板 -->
+<template name="myTmp">
+    <view class="title">这是我自定义的模板内容</view>
+    name:{{name}}
+    age:{{age}}
+</template>

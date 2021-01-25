@@ -1,0 +1,17 @@
+/* components/nav-header/nav-header.wxss */
+.header{
+  display: block;
+  margin-bottom: 15rpx;
+}
+.title{
+  font-size: 32rpx;
+  color: rgba(85, 82, 85, 0.87);
+  line-height: 60rpx;
+}
+.more{
+  float: right;
+  border: 1rpx solid #333;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+}
